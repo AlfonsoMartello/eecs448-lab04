@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Holy Cannoli!</title>
+    <script type="text/javascript"
+            src="formChecker.js">
+    </script>
+    <link href="style.css"
+          rel="stylesheet"
+          type="text/css" />
+    <PHP> echo '<link rel="stylesheet" type="text/css" href="style.css"></head>'; <PHP>
+</head>
+
+<body>
+    <h1 class="title">Welcome to the Holy Cannoli! Your one stop shop for heavenly dessert!</h1>
+    <form action="customerBackend.php" method="post" onsubmit="checkForm()">
+        <p class="error" id="error" hidden>Error: Each field must be filled. The quantity entered may not be negative. The username must be an email address. The quantity must be a number.</p>
+        <div class="login">
+          <p>Please login before completing your purchase!</p>
+          Username: <br><input type="text" name="username" id="username" required><br>
+          Password: <br><input type="password" name="password" required><br>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="cannoli.jpg" height="500" alt="The Holy Cannoli" style="width:100%">
+            <h2>The Holy Cannoli (our name sake)</h2>
+            <div class="price">Price (each): $2.00<br>
+            Quantity: <input type="text" name="cannoli_amt" id="cannoli_amt" required></div><br>
+          </div>
+          <div class="column">
+            <img src="cookie.jpg" height="600" alt="Unde-Nile-ablely Delicious Cookie" style="width:100%">
+            <h2>Unde-Nile-ablely Delicious Cookie:</h2>
+            <div class="price">Price (each): $1.00<br>
+            Quantity: <input type="text" name="cookie_amt" id="cookie_amt" required></div><br>
+          </div>
+          <div class="column">
+            <img src="cake.jpg" height="700" alt="To Die For (3 Days) Cake" style="width:100%">
+            <h2>To Die For (3 Days) Cake:</h2>
+            <div class="price">Price (per slice): $3.00<br>
+            Quantity: <input type="text" name="cake_amt" id="cake_amt" required></div><br>
+          </div>
+        </div>
+        <div class="price">Shipping Options:<br>
+        <input type="radio" name="shipping" value="Free" required> Free 7 day<br>
+        <input type="radio" name="shipping" value="Overnight" required> $50.00 over night<br>
+        <input type="radio" name="shipping" value="Three Day" required> $5.00 three day<br>
+        <input type="submit" name="My button" value="Submit Order">
+        <input type="reset"></div>
+    </form>
+</body>
+</html>
